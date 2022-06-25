@@ -1,0 +1,29 @@
+<div class="login">
+  <form class="custom-form" method="post">
+
+    <h1>LOGIN</h1>
+
+    <input
+      type="number"
+      matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+      [(ngModel)]="codigoexist"
+      name="Codigo de Medico"
+      placeholder="Codigo"
+      required="required"
+    />
+
+    <br> <br>
+
+    <input
+      type="number"
+      matInput [formControl]="passwordFormControl" [errorStateMatcher]="matcher"
+      [(ngModel)]="dniexist"
+      name="DNI"
+      placeholder="DNI"
+      required="required"
+    />
+
+    <br>    <br> <br>
+    <button (click)="getAllUsers()" class="btn-ingresar" mat-raised-button color="primary">Ingresar</button>
+  </form>
+</div>
